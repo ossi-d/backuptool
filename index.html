@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Content switching component with jQuery</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+
+  <header class="header-base">
+  <h1 class="header__title">Kunsthandel Widder</h1>
+
+  <label class="input-label" for="choose">
+    Backup  erstellen
+  </label>
+
+  <div class="select-area">
+    <form method="post" action="selectedComponent.php">
+      <select name="chooseBackup" id="choose" class="input-select" onchange="this.form.submit()" onsubmit="return false">
+        <option value="null" selected disabled>Komponenten wählen</option>
+        <option value="all">Backup komplett (CRM + CMS)</option>
+        <option value="crm">Backup CRM</option>
+        <option value="cms">Backup CMS</option>
+      </select>
+    </form>
+  </div>
+</header>
+
+<main role="main" class="main-content">
+
+  <div id="progresswraper" style="display: none">
+    <span>Backup wird erstellt, dies kann eine Weile dauern...</span>
+    <div id="pb"></div>
+  </div>
+
+</main>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="public/js/index.js"></script>
+
+</body>
+</html>
