@@ -77,7 +77,7 @@ class BackupController
      */
     public function getCmsFileName()
     {
-        $filename = 'kunsthandelwiddercomdb2_'.$this->getDate().'.sql';
+        $filename = 'filename_'.$this->getDate().'.sql';
         return $filename;
     }
 
@@ -87,7 +87,7 @@ class BackupController
      */
     public function getCrmFileName()
     {
-        $filename = 'kunsthandelwidder_'.$this->getDate().'.sql';
+        $filename = 'filename_'.$this->getDate().'.sql';
         return $filename;
     }
 
@@ -97,7 +97,7 @@ class BackupController
      */
     public function getBackupDirectory()
     {
-        $directoryname = 'kunsthandelwidder_web_crm_'.$this->getDate();
+        $directoryname = 'filename_web_crm_'.$this->getDate();
         return $directoryname;
     }
 
